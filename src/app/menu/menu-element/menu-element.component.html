@@ -1,0 +1,11 @@
+<div class="menu-element" (click)="onClick()" [class.selected]="IsSelected">
+    @if (IsSelected) {
+        <div class="border-selected"></div>
+    }
+    <i class="material-icons">{{icon}}</i>
+    <span>
+        {{ label }}
+    </span>
+    <ng-content select="app-menu-element" #menuElements>
+    </ng-content>
+</div>

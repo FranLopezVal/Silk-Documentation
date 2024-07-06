@@ -1,0 +1,15 @@
+<div class="menu-container">
+    <div class="menu-header" (click)="titleClick()">
+        <span class="title">
+            Silk
+        </span>
+        <span class="sub-title">
+            Simple & fast
+        </span>
+    </div>
+    <div class="menu-content">
+        <ng-content select="app-menu-element"
+        #menuElements>
+        </ng-content>
+    </div>
+</div>

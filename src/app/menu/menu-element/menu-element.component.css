@@ -1,0 +1,33 @@
+.menu-element {
+    color: var(--gray-300);
+    cursor: pointer;
+    transition: color 0.3s;
+    width: 100%;
+    text-align: center;
+    padding-block: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+
+    &:hover {
+        color: var(--gray-100);
+    }
+
+    &.selected {
+        transition: color 0.3s;
+        color: var(--vivid-pink);
+        /* border-left: 1px solid white;
+        box-sizing: content-box; */
+    }
+}
+
+.border-selected {
+    position: fixed;
+    position: absolute;
+    width: 4px;
+    background-color: white;
+    height: 100%;
+    top: 0;
+    filter: drop-shadow(2px 0px 6px white);
+}
