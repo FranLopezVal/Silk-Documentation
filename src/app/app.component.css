@@ -9,3 +9,73 @@
     width: calc(100% - 6rem);
     position: absolute;
 }
+
+.budget-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.budget-version-button {
+
+    padding: .5rem;
+    border: 1px solid var(--gray-700);
+    background-color: #0f0f11;
+    border-radius: 8px;
+    font-size: 12px;
+
+    & .info {
+        background: -webkit-linear-gradient(var(--color-rotate), var(--worm-green), var(--vivid-pink));
+        background: linear-gradient(var(--color-rotate), var(--worm-green), var(--vivid-pink));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &.-github {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+a {
+    font-weight: bold;
+    background-image: linear-gradient(to right,
+            var(--vivid-pink),
+            var(--vivid-pink) 50%,
+            var(--gray-300) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+a:before {
+    content: '';
+    background: var(--vivid-pink);
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+}
+
+a:hover::before {
+    width: 100%;
+}

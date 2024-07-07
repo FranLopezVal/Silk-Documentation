@@ -23,7 +23,6 @@ export class CodeBlockComponent implements OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.code, this.language);
     this.formattedCode = Prism.highlight(this.code, Prism.languages[this.language], this.language);
   }
   ngOnChanges() {
@@ -36,7 +35,6 @@ export class CodeBlockComponent implements OnChanges {
 
   copyToClipboard() {
     navigator.clipboard.writeText(this.code || '').then(() => {
-      // console.log('Copied to clipboard');
     }, (err) => {
       console.error('Failed to copy to clipboard', err);
     });

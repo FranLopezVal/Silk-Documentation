@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { MenuElementComponent } from './menu/menu-element/menu-element.component';
 
@@ -12,4 +12,5 @@ import { MenuElementComponent } from './menu/menu-element/menu-element.component
 })
 export class AppComponent {
   title = 'Silk-Documentation';
+  constructor(private router: Router) {}
 }

@@ -1,15 +1,28 @@
-
 <app-menu [submenu]="false">
   <app-menu-element collapsed="true" label="Home" link="home" icon="home"></app-menu-element>
   <app-menu-element collapsed="true" label="Library" link="library" icon="integration_instructions"></app-menu-element>
   <app-menu-element collapsed="true" label="Docs" link="doc" icon="library_books"></app-menu-element>
   <app-menu-element collapsed="true" label="About" link="about" icon="contact_support"></app-menu-element>
 </app-menu>
-
-
+<div class="budget-buttons">
+  <div class="budget-version-button">
+    <span class="info">
+      Silk Framework 0.1.6.24 is now available!
+    </span>
+    <span class="download">
+      <a href="https://www.nuget.org/packages/SilkFramework" rel="opener noreferrer noopener" target="_blank"
+        class="download-link"> Download it now! </a>
+    </span>
+  </div>
+  <div class="budget-version-button -github">
+    <img class="logo" src="assets/icons/github-mark-white.png" height="20" alt="logo">  
+  <a href="https://github.com/FranLopezVal/Silk-Framework" rel="opener noreferrer noopener" target="_blank"
+    class="download-link"> GitHub </a>
+  </div>
+</div>
 <div class="wrapper">
-<router-outlet />
+  <router-outlet />
 </div>
 <p class="copyright">
-  &copy; 2021 Silk Framework. All rights reserved.
+  &copy; 2024 Silk Framework. All rights reserved.
 </p>

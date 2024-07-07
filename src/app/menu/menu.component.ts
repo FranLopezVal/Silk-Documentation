@@ -17,7 +17,6 @@ export class MenuComponent {
   constructor(private route: Router) {}
 
   ngAfterContentInit(): void {
-    console.log(this.menuElements);
   }
 
   titleClick() {
@@ -50,7 +49,6 @@ export class MenuComponent {
   onSubmenuClick() {
     if (this.submenu) {
       this.collapsed = !this.collapsed;
-      console.log(this.collapsed);
     }
   }
 }
