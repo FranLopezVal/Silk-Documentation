@@ -1,0 +1,64 @@
+<h1 class="title">
+    How to Routing in <strong>Silk Framework</strong>!
+</h1><br><br><br>
+<p>
+    The routing of Silk is very simple and easy to use.
+</p>
+
+<div class="doc-panel">
+    <h4 class="pad">Routes common info</h4><br>
+    <p class="pad">
+        Silk have three types of routes:
+    </p>
+    <p class="pad-l">
+        <li>First one is <strong>Attribute Route</strong>.</li>
+    </p>
+    <p class="pad-l">
+        You can implement the route via attribute in the target method what you want to expose.
+    </p>
+    <dl class="pad-l">
+        <dt>Methods Allowed</dt>
+        <dd>GET</dd>
+        <dd>POST</dd>
+        <dd>[...Other allow in next version] </dd>
+    </dl>
+    <app-code-block [code]="code_01" [language]="'csharp'">
+    </app-code-block>
+    <p class="pad-l">
+        In the above code, the expose route is <strong>"/products/json/:setprice"</strong> and the method is <strong>GET</strong>.
+    </p>
+    <p class="pad-l">
+        The <strong>setprice</strong> is a parameter that you can pass to the method.
+    </p>
+    <p class="pad">
+        When user request this method, it return a html object with the value of the parameter. You can return multiple types of objects like
+        JSon, XML, HTML, FILE, etc.
+    </p>
+    <p class="pad-l">
+        <li>Second one is <strong>Static Route</strong>.</li>
+    </p>
+    <p class="pad">
+        You can implement the route via static files in the <strong>'Silk_Installation_Path'/Assets</strong> folder.
+        Silk will automatically detect the file and expose it to the user, you can find the monitor files in the <strong>./Assets/silk/monitor</strong> folder.
+        Can use like simple web server.
+    </p>
+    <p class="pad-l">
+        <li>Third one is <strong>Dynamic Route</strong>.</li>
+    </p>
+    <p class="pad">
+        The last one is the dynamic route, you can implement the route via the <strong>RouterManager</strong> class.
+    </p>
+    <app-code-block [code]="code_02" [language]="'csharp'">
+    </app-code-block>
+    <p class="pad-l">
+        The fist argument is a Route, is a class that have the route and the method to expose.
+    </p>
+    <p class="pad-l">
+        The second argument is a delaget Function like it:
+    </p>
+    <app-code-block [code]="code_03" [language]="'csharp'">
+    </app-code-block>
+</div>
+<div class="doc-panel">
+
+</div>

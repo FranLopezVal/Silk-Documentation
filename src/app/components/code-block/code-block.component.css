@@ -1,0 +1,28 @@
+.container {
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    margin-inline: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons {
+    position: absolute;
+    border-bottom: 1px solid var(--gray-700);
+    border-left: 1px solid var(--gray-700);
+    top: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    & span {
+        position: absolute;
+            top: 0;
+        display: block;
+        width: 100%;
+    }
+
+    &:active {
+        color: var(--vivid-pink);
+    }
+}

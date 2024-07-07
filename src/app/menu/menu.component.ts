@@ -1,5 +1,6 @@
-import { Component, ContentChildren, QueryList, ViewChildren } from '@angular/core';
+import { Component, ContentChildren, Input, QueryList, ViewChildren } from '@angular/core';
 import { MenuElementComponent } from './menu-element/menu-element.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +10,11 @@ import { MenuElementComponent } from './menu-element/menu-element.component';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
+  @Input() submenu: boolean = false;
+  @Input() collapsed: boolean = false;
   @ContentChildren(MenuElementComponent) menuElements?: QueryList<MenuElementComponent>;
 
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngAfterContentInit(): void {
     console.log(this.menuElements);
@@ -20,6 +23,8 @@ export class MenuComponent {
   titleClick() {
     this.collapseAll();
     this.unselectAll();
+
+      this.route.navigate([''], { relativeTo: this.route.routerState.root });
   }
 
   collapseAll() {
@@ -32,5 +37,20 @@ export class MenuComponent {
     this.menuElements?.forEach((element) => {
       element.unselect();
     });
+  }
+
+  get IsAnyExpanded(): boolean {
+    let result = false;
+    this.menuElements?.forEach((element) => {
+      element.IsExpanded === true ? result = true : null;
+    });
+    return result;
+  }
+
+  onSubmenuClick() {
+    if (this.submenu) {
+      this.collapsed = !this.collapsed;
+      console.log(this.collapsed);
+    }
   }
 }

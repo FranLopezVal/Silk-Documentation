@@ -1,6 +1,5 @@
-import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-init',
@@ -12,13 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     trigger('fadeIn', [
       state('void', style({
         opacity: '0',
-        transform: 'translateY(-400%)'
+        transform: 'translateY(-100%)'
       })),
       state('*', style({
         opacity: '1',
         transform: 'translateY(0)'
       })),
-      transition('void => *', animate('2000ms ease-in-out'))
+      transition('void => *', animate('1500ms ease-in-out'))
     ])
   ],
 })

@@ -1,13 +1,15 @@
 
-<app-menu>
-  <app-menu-element label="Home" link="home" icon="home"></app-menu-element>
-  <app-menu-element label="Library" link="library" icon="integration_instructions"></app-menu-element>
-  <app-menu-element label="Docs" link="documentation" icon="library_books"></app-menu-element>
-  <app-menu-element label="About" link="about" icon="contact_support"></app-menu-element>
+<app-menu [submenu]="false">
+  <app-menu-element collapsed="true" label="Home" link="home" icon="home"></app-menu-element>
+  <app-menu-element collapsed="true" label="Library" link="library" icon="integration_instructions"></app-menu-element>
+  <app-menu-element collapsed="true" label="Docs" link="doc" icon="library_books"></app-menu-element>
+  <app-menu-element collapsed="true" label="About" link="about" icon="contact_support"></app-menu-element>
 </app-menu>
 
 
 <div class="wrapper">
 <router-outlet />
 </div>
-
+<p class="copyright">
+  &copy; 2021 Silk Framework. All rights reserved.
+</p>

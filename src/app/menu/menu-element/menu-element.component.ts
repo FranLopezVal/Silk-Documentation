@@ -1,21 +1,22 @@
-import { Component, ContentChildren, Input, QueryList, ViewChildren } from '@angular/core';
+import { Component, ContentChildren, Input, QueryList } from '@angular/core';
 import { MenuComponent } from '../menu.component';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu-element',
   standalone: true,
-  imports: [MenuComponent],
+  imports: [MenuComponent, RouterLinkActive, RouterLink],
   templateUrl: './menu-element.component.html',
   styleUrl: './menu-element.component.css'
 })
 export class MenuElementComponent {
-
+  @Input() submenu?: boolean = false;
   @Input() label?: string;
   @Input() link?: string;
   @Input() icon?: string;
   @ContentChildren(MenuElementComponent) childrens?: QueryList<MenuElementComponent>;
 
-  private _expanded: boolean = false;
+  private _expanded : boolean = false;
   private _selected: boolean = false;
 
   public get IsExpanded(): boolean {
@@ -26,7 +27,12 @@ export class MenuElementComponent {
     return this._selected;
   }
 
-  constructor(private menu: MenuComponent) {}
+  constructor(private menu: MenuComponent, private router: Router
+  ) {}
+
+  IsActiveRoute(route: string) {
+    return this.router.url.includes(route);
+  }
 
   collapse() {
     this._expanded = false;
@@ -40,7 +46,8 @@ export class MenuElementComponent {
   select() {
     this.menu.unselectAll();
     this._selected = true;
-    console.log(this.label);  
+    if (this.link)
+      this.router.navigate([this.link], { relativeTo: this.router.routerState.root });
   }
 
   unselect() {
@@ -51,10 +58,9 @@ export class MenuElementComponent {
   }
 
   onClick() {
+    this.select();
     if (this.childrens!.length > 0) {
       this._expanded = !this._expanded;
-    } else {
-      this.select();
     }
   }
 }
