@@ -3,11 +3,10 @@
         <span [class.selected]="IsSelected('gettingstarted')" (click)="selectDocumentation('gettingstarted')">Getting
             started</span>
         <span [class.selected]="IsSelected('routing')" (click)="selectDocumentation('routing')">Routing</span>
+        <span [class.selected]="IsSelected('configuration')" (click)="selectDocumentation('configuration')">Configuration</span>
         <span [class.selected]="IsSelected('models')" (click)="selectDocumentation('models')">Models</span>
         <span [class.selected]="IsSelected('services')" (click)="selectDocumentation('services')">Services</span>
         <!-- <span [class.selected]="IsSelected('gettingstarted')"Injection" (click)="electDocumentation('dependency-injection')"></span> -->
-        <span [class.selected]="IsSelected('configuration')"
-            (click)="selectDocumentation('configuration')">Configuration</span>
         <span [class.selected]="IsSelected('logging')" (click)="selectDocumentation('logging')">Loggin</span>
         <span [class.selected]="IsSelected('testing')" (click)="selectDocumentation('testing')">Testing</span>
         <span [class.selected]="IsSelected('deployment')" (click)="selectDocumentation('deployment')">Deployment</span>
@@ -19,6 +18,8 @@
         {<app-getting-started></app-getting-started>}
         @case ('routing')
         {<app-routing-docs></app-routing-docs>}
+        @case ('configuration')
+        {<app-config-docs></app-config-docs>}
         @default
         {<app-getting-started></app-getting-started>}
         }

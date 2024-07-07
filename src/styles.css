@@ -4,6 +4,7 @@
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -91,8 +92,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-}
+* {}
 
 /* You can add global styles to this file, and also import other style files */
 body {
@@ -256,37 +256,14 @@ app-menu-element {
     color: var(--gray-100);
 }
 
-.doc-panel {
-    border: 1px solid var(--gray-600);
-    border-radius: 1rem;
-    margin-block: 1rem;font-size: 12px;
-    overflow: hidden;
-    & h4 {
-        margin: 0;
-        padding: .5rem .5rem .5rem 1rem;
-        border-bottom: 1px solid var(--gray-600);
-        background-color: var(--gray-700);
-    }
-    & h5 {
-        margin: 0;
-    }
-    & dl {
-        margin-block: 0;
-    }
-    & p, img, h5, span, dl {
-        /* padding-bottom: 1rem;
-        padding-left: 1rem; */
-    }
-    & .pad {
-        padding-bottom: 1rem;
-        padding-left: 1rem;
-    }
-    & .pad-l {
-        padding-left: 1rem;
-    }
+
+
+.budget {
+    color: var(--gray-100);
+    background-color: var(--gray-700);
+    border-radius: 4px;
+    padding-inline: 4px;
 }
-
-
 
 
 

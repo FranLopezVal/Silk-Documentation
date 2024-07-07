@@ -5,59 +5,86 @@
     You can get started with the Silk Framework by following the steps below:
 </p>
 
-<div class="doc-panel">
-    <h4>Common in any method</h4>
-    <br>
-    <p class="pad">
+<!-- <div class="doc-panel"> -->
+    <h3>Create the proyect</h3>
+    <!-- <br> -->
+    <p>
         First, you need create a new project of <a href="{{net8_link}}" target="_blank"
             style="color: rgb(0, 225, 255);">.NET8 </a>
     </p>
-    <h5 class="pad">Using Visual Studio 2022</h5>
-    <p  class="pad">
-        * Important: You need to have the Visual Studio 2022 installed on your computer. NET8 is only available for this
+    <h4>Using Visual Studio 2022</h4>
+    <p >
+        * Important: You need to have the Visual Studio 2022 installed on your computer. .NET8 is only available for this
         Visual Studio version.
     </p>
-    <p class="pad">
-        Create a new project whose type is a compatible with NET8. You can use the <strong>Console App (.NET)</strong>
+    <p>
+        Create a new project whose type is a compatible with .NET8, You can use the <span class="budget">Console App (.NET)</span>
         template
-        or <strong>ASP.Net core </strong> template.
+        or <span class="budget">ASP.Net core</span> template.
     </p>
-    <img class="pad" src="../../../../../assets/documentation/d0.png" alt="Visual Studio 2022" />
-    <p class="pad">
+    <br>
+    <img src="../../../../../assets/documentation/d0.png" alt="Visual Studio 2022" />
+    <p>
         Configure your name and path of the project.
     </p>
-    <img class="pad" src="../../../../../assets/documentation/d1.png" alt="Visual Studio 2022" />
-    <p class="pad">
+    <img src="../../../../../assets/documentation/d1.png" alt="Visual Studio 2022" />
+    <p>
         Select the NET8 version.
     </p>
-    <img class="pad" src="../../../../../assets/documentation/d2.png" alt="Visual Studio 2022" />
+    <img src="../../../../../assets/documentation/d2.png" alt="Visual Studio 2022" />
 
-    <h5 class="pad">Using dotnet CLI</h5>
-    <span class="pad">Open the terminal and run the following command:</span>
+    <h4>Using dotnet CLI</h4>
+    <span>Open the terminal and run the following command:</span>
     <app-code-block [code]="code_01" [language]="'bash'">
     </app-code-block>
-    <span class="pad">Then, you can build the app</span>
+    <span>Then, you can build the app</span>
     <app-code-block [code]="code_02" [language]="'bash'">
     </app-code-block>
-</div>
-<div class="doc-panel">
-    <h4 class="pad">First method to install Silk</h4><br>
-    <p class="pad">
+<!-- </div> -->
+<!-- <div class="doc-panel"> -->
+    <h3>Install Silk Framework Libraries</h3>
+    <h4> Using Nuget package manager (Visual Studio 2022)</h4>
+    <p>
         The first method is to install the Silk Framework using the NuGet package manager into Visual Studio 2022.
     </p>
-    <p class="pad">
+    <p>
         Open the NuGet package manager and search for the Silk Framework, and install it in your pick project.
     </p>
-    <img class="pad" src="../../../../../assets/documentation/d3.png" alt="Visual Studio 2022" />
-</div>
-<div class="doc-panel">
-    <h4 class="pad">Second method to install Silk</h4><br>
-    <p class="pad-l">
+    <img src="../../../../../assets/documentation/d3.png" alt="Visual Studio 2022" />
+    <!-- </div> -->
+    <!-- <div class="doc-panel"> -->
+    <h4>Using <span class="budget">dotnet CLI</span></h4>
+    <p>
         In the second method, you can install the Silk Framework using the dotnet CLI.
     </p>
-    <p class="pad-l">
+    <p>
         Change the version of the Silk Framework to the latest version, or the version you want to install.
     </p>
     <app-code-block [code]="code_03" [language]="'bash'">
     </app-code-block>
-</div>
+
+    <h3>Fist build with Silk</h3>
+    <p>
+        The first way to build with Silk is to create a new class to initalize the server.
+        Adapt the code to your needs, In a <span class="budget">Console App</span> template, or WinForms, Etc...
+        The recomendation of Silk Team is to use the <span class="budget">Console App</span> template.
+    </p>
+    <p>
+        Now create a <span class="budget">GenericServer</span> with default configuration for the test.
+        Just for testing in <span class="budget">localhost</span> and <span class="budget">port 80</span>.
+    </p>
+    <app-code-block [code]="code_04" [language]="'csharp'">
+    </app-code-block>
+    <p>
+        If you are using Visual Studio 2022, you can run the app with the <span class="budget">F5</span> key.
+    </p>
+    <p>
+        You can test the app with the following command if has using <span class="budget">dotnet CLI</span>
+    </p>
+    <app-code-block [code]="'dotnet run'" [language]="'bash'">
+    </app-code-block>
+    <p>
+        Now navigate to <span class="budget">http://localhost:80/silk/monitor</span> in your browser.
+        if you see the Silk Monitor, the server is running.
+    </p>
+    

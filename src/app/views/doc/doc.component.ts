@@ -4,6 +4,7 @@ import { MenuElementComponent } from '../../menu/menu-element/menu-element.compo
 import { MenuComponent } from '../../menu/menu.component';
 import { gettingstartedComponent } from '../../versions/0.1.6.24/docs/getting-start/gettingstarted.component';
 import { RoutingDocsComponent } from '../../versions/0.1.6.24/docs/routing/routing.component';
+import { ConfigurationDocsComponent } from '../../versions/0.1.6.24/docs/configuration/configuration.component';
 
 @Component({
   selector: 'app-doc',
@@ -12,7 +13,8 @@ import { RoutingDocsComponent } from '../../versions/0.1.6.24/docs/routing/routi
     MenuComponent,
     MenuElementComponent,
     gettingstartedComponent,
-    RoutingDocsComponent
+    RoutingDocsComponent,
+    ConfigurationDocsComponent
   ],
   templateUrl: './doc.component.html',
   styleUrl: './doc.component.css'

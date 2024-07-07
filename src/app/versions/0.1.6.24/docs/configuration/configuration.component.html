@@ -1,0 +1,47 @@
+<h1 class="title">
+    How to Configure back-end server in <strong>Silk Framework</strong>!
+</h1><br><br><br>
+<p>
+    You have some methods to configure the back-end server, in the config file or diretly in the code.
+</p>
+
+<!-- <div class="doc-panel"> -->
+<h3>Using a Config file</h3>
+<p>
+    Can find the config file in <span class="budget">'Silk_Installation_Path'/Data/config.json</span>
+</p>
+<p>
+    The config file is a json file that have the server configuration, like the port, the host, etc. And see like this:
+</p>
+<app-code-block [code]="code_01" [language]="'json'">
+</app-code-block>
+
+
+<h3>Configure in code</h3>
+<p>
+    You can configure the server in the code, like this:
+</p>
+<app-code-block [code]="code_02" [language]="'csharp'">
+</app-code-block>
+
+
+<h3>Configure Steep by Steep</h3>
+<dl>
+    <dt>Server</dt>
+    <dd><span class="budget">IP</span>: Define a target IP of the server (not is a real Endpoint, just you require configure you Endpoint server to listen in this IP)</dd>
+    <dd><span class="budget">Port</span>: Just the Port of the server</dd>
+    <dt>Database</dt>
+    <dd><span class="budget">Host</span>: IP/File or Alloc of the database host</dd>
+    <dd><span class="budget">Port</span>: Just the Port of the database</dd>
+    <dd><span class="budget">Name</span>: Name definition, require for context implementations in Silk</dd>
+    <dd><span class="budget">Connection</span>: The connection string for create the connection with the database</dd>
+    <dt>Loggin</dt>
+    <dd><span class="budget">EnableMonitor</span>: Enable Silk monitor, the recomendation is disabled in production </dd>
+    <dd><span class="budget">EnableConsole</span>: Enable log in console</dd>
+    <dt>Certificate</dt>
+    <dd><span class="budget">KeyPath</span>: Key file of Certificate for <span class="budget">HTTPS</span> connections</dd>
+    <dd><span class="budget">CertPath</span>: Certificate file for <span class="budget">HTTPS</span> connections</dd>
+    
+    <dd><span class="budget">UniqueThread</span>: Indicate if you want use unique thread for manage the server</dd>
+    <dd><span class="budget">Locale</span>: Indicate to silk server, your Localization Key </dd>
+</dl>
