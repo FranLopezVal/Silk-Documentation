@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    min-width: 50vi;
+    /* overflow: auto; */
+    /* width: 100%; */
+    font-size: 1.5rem;font-weight: lighter;
+        color: var(--gray-300);
+}

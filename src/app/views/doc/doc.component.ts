@@ -5,11 +5,13 @@ import { MenuComponent } from '../../menu/menu.component';
 import { gettingstartedComponent } from '../../versions/0.1.6.24/docs/getting-start/gettingstarted.component';
 import { RoutingDocsComponent } from '../../versions/0.1.6.24/docs/routing/routing.component';
 import { ConfigurationDocsComponent } from '../../versions/0.1.6.24/docs/configuration/configuration.component';
+import { LoaderComponent } from '../../components/loader/loader.component';
 
 @Component({
   selector: 'app-doc',
   standalone: true,
   imports: [CodeBlockComponent,
+    LoaderComponent,
     MenuComponent,
     MenuElementComponent,
     gettingstartedComponent,
