@@ -240,6 +240,10 @@ app-menu-element {
     width: 100%;
 }
 
+app-init {
+    overflow: hidden;
+}
+
 .copyright {
     position: absolute;
     bottom: 0;

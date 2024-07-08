@@ -10,14 +10,14 @@ import { Component } from '@angular/core';
   animations: [
     trigger('fadeIn', [
       state('void', style({
-        opacity: '0',
-        transform: 'translateY(-100%)'
+        opacity: '0', //translateY(20%) scale(0) 
+        transform: 'translateY(20%) scale(0) '
       })),
       state('*', style({
-        opacity: '1',
-        transform: 'translateY(0)'
+        opacity: '1', //translateY(0) scale(1)
+        transform: '//translateY(0) scale(1)'
       })),
-      transition('void => *', animate('1500ms ease-in-out'))
+      transition('void => *', animate('2500ms cubic-bezier(.0,2,.6,1)'))
     ])
   ],
 })
